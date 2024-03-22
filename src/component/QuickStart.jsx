@@ -156,7 +156,7 @@ function QuickStart() {
           Quick Start
         </h1>
 
-        <div className="grid grid-cols-3 gap-x-4 gap-y-8 md:mx-5">
+        <div className="grid grid-cols-3 gap-x-1 gap-y-8 p-4 md:mx-5 md:gap-x-4">
           {data.map((item, index) => (
             <div
               key={index}
