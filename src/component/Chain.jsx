@@ -1,3 +1,5 @@
+import Wallet from "./Wallet";
+
 function Chain() {
   return (
     <div>
@@ -8,7 +10,7 @@ function Chain() {
         <br />
         This protocol establishes a remote connection using a Bridge server.
       </p>
-      <p>Get Started</p>
+      <Wallet>Get Started</Wallet>
     </div>
   );
 }
