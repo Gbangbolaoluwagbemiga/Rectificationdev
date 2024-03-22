@@ -44,7 +44,7 @@ function Header() {
 
   return (
     <div className=" mx-3 flex justify-between gap-4 p-3">
-      <div className="w-[10%]">
+      <div className="w-[15%] px-3">
         <a href="https://coinmarketcap.com/" target="_blank">
           <div className="text-base font-bold md:text-xl">Powered by</div>
           <svg
@@ -62,7 +62,7 @@ function Header() {
         </a>
       </div>
 
-      <div className="scroll-container flex ">
+      <div className="scroll-container flex overflow-auto">
         {coins.map((coin, index) => (
           <div key={index} className="scroll me-8">
             <a
