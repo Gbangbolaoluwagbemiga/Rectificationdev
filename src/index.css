@@ -13,9 +13,6 @@
   overflow: hidden;
 }
 
-.scroll-container .scroll {
-}
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -26,5 +23,5 @@
 }
 
 .scroll-container .scroll {
-  animation: scroll 10s linear infinite;
+  animation: scroll 5s linear infinite;
 }

@@ -28,14 +28,6 @@ function Footer() {
         <h2>Ready to resolve your blockchain issues?</h2>
         <h2>We are here to provide help.</h2>
         <Wallet>Get Started</Wallet>
-
-        {/* <div className=" text-center">
-          <i className="fab fa-github" aria-hidden="true"></i>
-          <i className="fab fa-twitter" aria-hidden="true"></i>
-          <i className="fab fa-discord" aria-hidden="true"></i>
-          <i className="fab fa-reddit" aria-hidden="true"></i>
-          <i className="fab fa-mail" aria-hidden="true"></i>
-        </div> */}
       </div>
       <h2 className="text-center">On-chain Fix © All rights reserved.</h2>
     </div>
