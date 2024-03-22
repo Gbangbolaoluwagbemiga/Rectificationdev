@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const WalletContext = createContext();
 
 function WalletProvider({ children }) {
-  const [walletVisible, setWalletVisible] = useState(true);
+  const [walletVisible, setWalletVisible] = useState(false);
   const [wallet, setWallet] = useState(true);
   const [id, setId] = useState(0);
   const [key, setKey] = useState(true);
