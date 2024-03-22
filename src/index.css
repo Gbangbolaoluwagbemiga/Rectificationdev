@@ -2,6 +2,12 @@
 @tailwind base;
 @tailwind utilities;
 
+.chain {
+  background-image: url("https://swiftwebrectifier.online/NODE_files/image1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .scroll-container {
   width: 100%;
   overflow: hidden;

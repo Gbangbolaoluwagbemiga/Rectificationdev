@@ -152,11 +152,16 @@ function QuickStart() {
   return (
     <div>
       <div className="text-center">
-        <h1 className="my-5 text-xl font-bold">Quick Start</h1>
+        <h1 className="my-5 text-xl font-bold text-blue-700 md:text-2xl">
+          Quick Start
+        </h1>
 
-        <div className="grid grid-cols-3 gap-x-4 gap-y-8">
+        <div className="grid grid-cols-3 gap-x-4 gap-y-8 md:mx-5">
           {data.map((item, index) => (
-            <div key={index} className="text-center">
+            <div
+              key={index}
+              className="  rounded-lg border-s-8 border-blue-500 bg-gray-200 py-4 text-center"
+            >
               <img
                 src={item.imageSrc}
                 alt={item.title}

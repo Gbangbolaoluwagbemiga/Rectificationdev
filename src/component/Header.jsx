@@ -17,7 +17,7 @@ function Header() {
       link: "https://coinmarketcap.com/currencies/xrp",
     },
     {
-      name: "Tether USDt",
+      name: "Tether",
       symbol: "USDT",
       price: "$0.999851",
       changes: "0%",
