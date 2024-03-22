@@ -1,4 +1,5 @@
 import Chain from "./component/Chain";
+import Footer from "./component/Footer";
 import Header from "./component/Header";
 import QuickStart from "./component/QuickStart";
 
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Chain />
       <QuickStart />
+      <Footer />
     </div>
   );
 }
