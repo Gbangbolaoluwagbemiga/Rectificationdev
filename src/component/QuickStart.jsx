@@ -1,3 +1,5 @@
+import Wallet from "./Wallet";
+
 function QuickStart() {
   const data = [
     {
@@ -154,7 +156,11 @@ function QuickStart() {
 
         <div className="grid grid-cols-3 gap-4">
           {data.map((item, index) => (
-            <div key={index} className="text-center"></div>
+            <div key={index} className="text-center">
+              <img src={item.imageSrc} alt={item.title} className="h-8 w-8" />
+              <p className="font-bold">{item.title}</p>
+              <Wallet>{item.buttonText}</Wallet>
+            </div>
           ))}
         </div>
       </div>
