@@ -154,7 +154,7 @@ function QuickStart() {
       <div className="text-center">
         <h1 className="my-5 text-xl font-bold">Quick Start</h1>
 
-        <div className="grid grid-cols-3 gap-4 ">
+        <div className="grid grid-cols-3 gap-x-4 gap-y-8">
           {data.map((item, index) => (
             <div key={index} className="text-center">
               <img
