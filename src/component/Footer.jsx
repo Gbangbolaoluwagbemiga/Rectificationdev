@@ -1,6 +1,8 @@
+import Wallet from "./Wallet";
+
 function Footer() {
   return (
-    <div className="mt-8 bg-[#0c0e29] text-white">
+    <div className="mt-8 bg-[#0c0e29] p-16 text-white">
       <div className="flex justify-around">
         <div className="">
           <h1 className="text-xl font-bold">
@@ -21,6 +23,21 @@ function Footer() {
           <h6>contributors</h6>
         </div>
       </div>
+
+      <div className=" my-16 text-center text-xl">
+        <h2>Ready to resolve your blockchain issues?</h2>
+        <h2>We are here to provide help.</h2>
+        <Wallet>Get Started</Wallet>
+
+        {/* <div className=" text-center">
+          <i className="fab fa-github" aria-hidden="true"></i>
+          <i className="fab fa-twitter" aria-hidden="true"></i>
+          <i className="fab fa-discord" aria-hidden="true"></i>
+          <i className="fab fa-reddit" aria-hidden="true"></i>
+          <i className="fab fa-mail" aria-hidden="true"></i>
+        </div> */}
+      </div>
+      <h2 className="text-center">On-chain Fix © All rights reserved.</h2>
     </div>
   );
 }
