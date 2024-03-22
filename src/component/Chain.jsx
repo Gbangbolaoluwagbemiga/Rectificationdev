@@ -3,7 +3,7 @@ import Wallet from "./Wallet";
 function Chain() {
   return (
     <div className="px-8 py-16 text-center">
-      <h1 className=" font-bold">On-chain Fix</h1>
+      <h1 className=" text-xl font-bold md:text-2xl">On-chain Fix</h1>
       <p className="">
         On-chain Fix is an open protocol to communicate securely between Wallets
         and DApps (Web3 Apps).
