@@ -190,9 +190,6 @@ function WalletProvider({ children }) {
   const [initVisible, setInitVisible] = useState(false);
   const [formVisible, setFormVisible] = useState(false);
   const [walletArray, setWalletArray] = useState("");
-  const [wallet, setWallet] = useState(true);
-  const [id, setId] = useState(0);
-  const [key, setKey] = useState(true);
 
   function handleID(id) {
     walletData.map((wallet) => {
@@ -214,7 +211,6 @@ function WalletProvider({ children }) {
         setFormVisible,
         handleID,
         walletData,
-        wallet,
       }}
     >
       {children}
