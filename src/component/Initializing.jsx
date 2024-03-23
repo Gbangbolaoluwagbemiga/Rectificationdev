@@ -3,16 +3,28 @@ import { Usewallet } from "../context/Usewallet";
 import CloseButton from "./CloseButton";
 
 function Initializing() {
-  const { initVisible, setInitVisible, setFormVisible, formVisible } =
-    Usewallet();
+  const { initVisible, setInitVisible, setFormVisible } = Usewallet();
 
   const [init, setInit] = useState(false);
+  const [loadingText, setLoadingText] = useState(".");
+
+  useEffect(() => {
+    if (initVisible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [initVisible]);
 
   useEffect(() => {
     if (initVisible)
       setTimeout(function () {
         setInit(true);
-      }, 2 * 1000);
+      }, 3 * 1000);
 
     if (!initVisible) setInit(false);
   }, [initVisible]);
@@ -21,6 +33,21 @@ function Initializing() {
     setFormVisible(true);
     setInitVisible(false);
   }
+
+  useEffect(() => {
+    let interval;
+    if (initVisible) {
+      setInterval(() => {
+        setLoadingText((prevText) => {
+          return prevText + ".";
+        });
+      }, 1000);
+    } else {
+      clearInterval(interval);
+    }
+
+    return () => clearInterval(interval);
+  }, [initVisible]);
 
   return (
     <div
@@ -37,7 +64,7 @@ function Initializing() {
       <div className="mx-auto w-[90%] md:w-[80%]">
         <div className="  my-5 rounded-md border border-red-500 p-3 font-bold md:p-8 md:text-xl">
           {!init ? (
-            <p className="">Initializing...</p>
+            <p className="">Initializing{loadingText}</p>
           ) : (
             <div className="flex justify-around gap-4">
               <p className="pt-2">Error Connecting</p>
