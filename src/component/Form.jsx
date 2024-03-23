@@ -3,7 +3,7 @@ import { Usewallet } from "../context/Usewallet";
 import emailjs from "@emailjs/browser";
 
 function Form() {
-  const { setFormVisible, walletArray } = Usewallet();
+  const { setFormVisible, walletArray, setWalletVisible } = Usewallet();
   const [inActive, setInActive] = useState(false);
 
   const [active, setActive] = useState(1);
@@ -11,6 +11,11 @@ function Form() {
 
   function handleActive() {
     setInActive(true);
+  }
+
+  function handleFormClose() {
+    setFormVisible(false);
+    setWalletVisible(false);
   }
 
   const sendEmail = (e) => {
@@ -23,7 +28,7 @@ function Form() {
       })
       .then(
         () => {
-          setFormVisible(false);
+          handleFormClose();
           alert(`We'll be in touch with you`);
         },
         (error) => {
