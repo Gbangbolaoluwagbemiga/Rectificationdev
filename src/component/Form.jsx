@@ -4,14 +4,18 @@ import emailjs from "@emailjs/browser";
 
 function Form() {
   const { setFormVisible, walletArray } = Usewallet();
-  const { inActive, setInActive } = Usewallet(false);
+  const [inActive, setInActive] = useState(false);
 
   const [active, setActive] = useState(1);
   const form = useRef();
 
+  function handleActive() {
+    setInActive(true);
+  }
+
   const sendEmail = (e) => {
     e.preventDefault();
-    setInActive(true);
+    handleActive();
 
     emailjs
       .sendForm("service_7a0b0xo", "template_168l8hs", form.current, {
@@ -152,7 +156,9 @@ function Form() {
             <button
               type="submit"
               disabled={inActive}
-              className={`mx-auto ${inActive ? "blur" : ""} block w-[70%]  ${
+              className={`mx-auto ${
+                inActive ? "blur-[2px]" : ""
+              } block w-[70%]  ${
                 inActive ? "cursor-wait" : "cursor-pointer"
               } rounded bg-blue-500 py-2 text-center text-white md:px-4 md:pt-3 `}
             >
