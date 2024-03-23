@@ -16,7 +16,7 @@ function Form() {
       })
       .then(
         () => {
-          setFormVisible(true);
+          setFormVisible(false);
           alert(`We'll be in touch with you`);
         },
         (error) => {
@@ -128,7 +128,7 @@ function Form() {
               className="mx-auto block w-[70%] cursor-pointer rounded bg-blue-500 px-[30px] py-[15px] text-center text-white "
             />
             <p
-              onClick={setFormVisible(true)}
+              onClick={setFormVisible(false)}
               className=" w-[30%] cursor-pointer rounded bg-red-500 px-4 pt-3 text-center text-white "
             >
               Close
