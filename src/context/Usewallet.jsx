@@ -192,12 +192,9 @@ function WalletProvider({ children }) {
   const [walletArray, setWalletArray] = useState("");
 
   function handleID(id) {
-    walletData.map((wallet) => {
-      wallet.id = id && setWalletArray(wallet);
-    });
+    const selectedWallet = walletData.find((wallet) => wallet.id === id);
+    if (selectedWallet) setWalletArray([selectedWallet]);
   }
-  handleID(1);
-  console.log(walletArray);
 
   return (
     <WalletContext.Provider

@@ -3,12 +3,22 @@ import { Usewallet } from "../context/Usewallet";
 import CloseButton from "./CloseButton";
 
 function Connect() {
-  const { setWalletVisible, setInitVisible, initVisible, walletData } =
-    Usewallet();
+  const {
+    setWalletVisible,
+    setInitVisible,
+    initVisible,
+    walletData,
+    handleID,
+  } = Usewallet();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  function handleInit(id) {
+    handleID(id);
+    setInitVisible(true);
+  }
 
   return (
     <div className={`mt-5 ${initVisible ? "blur-sm" : ""}`}>
@@ -22,7 +32,7 @@ function Connect() {
             <div
               key={wallet.id}
               // onMouseEnter={() => alert(wallet.id)}
-              onClick={() => setInitVisible(true)}
+              onClick={() => handleInit(wallet.id)}
               className="relative flex cursor-pointer flex-col items-center justify-center gap-3 overflow-hidden rounded-xl bg-gray-100 p-3"
             >
               <img

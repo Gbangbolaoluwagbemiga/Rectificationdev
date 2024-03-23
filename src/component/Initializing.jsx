@@ -3,7 +3,8 @@ import { Usewallet } from "../context/Usewallet";
 import CloseButton from "./CloseButton";
 
 function Initializing() {
-  const { initVisible, setInitVisible, setFormVisible } = Usewallet();
+  const { initVisible, setInitVisible, setFormVisible, walletArray } =
+    Usewallet();
 
   const [init, setInit] = useState(false);
   const [loadingText, setLoadingText] = useState(".");
@@ -78,15 +79,22 @@ function Initializing() {
             </div>
           )}{" "}
         </div>
-        <div className=" my-5 flex justify-between rounded-md border p-3 font-bold md:p-8 md:text-xl">
-          <p>
-            Name <br />
-            Easy to use browser extension
-          </p>
-          <p>
-            <img src="" className="h-8 w-8" alt="" />
-          </p>
-        </div>
+        {!walletArray
+          ? ""
+          : walletArray.map((wallet) => (
+              <div
+                key={wallet.id}
+                className=" my-5 flex justify-between rounded-md border p-3 font-bold md:p-8 md:text-xl"
+              >
+                <p>
+                  {wallet.name} <br />
+                  Easy to use browser extension
+                </p>
+                <p>
+                  <img src={wallet.imageUrl} className="h-8 w-8" alt="" />
+                </p>
+              </div>
+            ))}
       </div>
     </div>
   );
