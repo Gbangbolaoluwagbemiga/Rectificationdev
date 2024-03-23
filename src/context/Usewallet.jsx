@@ -189,19 +189,18 @@ function WalletProvider({ children }) {
   const [walletVisible, setWalletVisible] = useState(false);
   const [initVisible, setInitVisible] = useState(false);
   const [formVisible, setFormVisible] = useState(false);
+  const [walletArray, setWalletArray] = useState("");
   const [wallet, setWallet] = useState(true);
   const [id, setId] = useState(0);
   const [key, setKey] = useState(true);
 
-  // const toggleWallet = () => {
-  //   setWalletVisible((prevState) => !prevState);
-  // };
-  const toggleEWallet = () => {
-    setWallet((prevState) => !prevState);
-  };
-  function toggleKey(key) {
-    setKey(key);
+  function handleID(id) {
+    walletData.map((wallet) => {
+      wallet.id = id && setWalletArray(wallet);
+    });
   }
+  handleID(1);
+  console.log(walletArray);
 
   return (
     <WalletContext.Provider
@@ -209,17 +208,13 @@ function WalletProvider({ children }) {
         walletVisible,
         initVisible,
         formVisible,
+        walletArray,
         setWalletVisible,
         setInitVisible,
         setFormVisible,
+        handleID,
         walletData,
         wallet,
-        toggleEWallet,
-        // toggleWallet,
-        id,
-        setId,
-        key,
-        toggleKey,
       }}
     >
       {children}

@@ -21,6 +21,7 @@ function Connect() {
           {walletData.map((wallet) => (
             <div
               key={wallet.id}
+              // onMouseEnter={() => alert(wallet.id)}
               onClick={() => setInitVisible(true)}
               className="relative flex cursor-pointer flex-col items-center justify-center gap-3 overflow-hidden rounded-xl bg-gray-100 p-3"
             >
