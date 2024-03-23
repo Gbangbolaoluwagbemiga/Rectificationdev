@@ -21,7 +21,6 @@ function Initializing() {
     setFormVisible(true);
     setInitVisible(false);
   }
-  console.log(formVisible);
 
   return (
     <div
