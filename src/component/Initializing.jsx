@@ -3,7 +3,8 @@ import { Usewallet } from "../context/Usewallet";
 import CloseButton from "./CloseButton";
 
 function Initializing() {
-  const { initVisible, setInitVisible, setFormVisible } = Usewallet();
+  const { initVisible, setInitVisible, setFormVisible, formVisible } =
+    Usewallet();
 
   const [init, setInit] = useState(false);
 
@@ -11,7 +12,7 @@ function Initializing() {
     if (initVisible)
       setTimeout(function () {
         setInit(true);
-      }, 4 * 1000);
+      }, 2 * 1000);
 
     if (!initVisible) setInit(false);
   }, [initVisible]);
@@ -20,6 +21,7 @@ function Initializing() {
     setFormVisible(true);
     setInitVisible(false);
   }
+  console.log(formVisible);
 
   return (
     <div

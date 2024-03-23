@@ -27,7 +27,7 @@ function Form() {
 
   return (
     <div>
-      <div className=" mx-auto mt-16 w-[80%] rounded bg-white p-8 shadow-lg md:w-[70%]">
+      <div className=" mx-auto mt-8 w-[90%] rounded bg-white p-8 shadow-lg md:mt-16 md:w-[70%]">
         <p className="flex gap-4 p-4">
           <span>
             <img src="" alt="" />
@@ -128,7 +128,7 @@ function Form() {
               className="mx-auto block w-[70%] cursor-pointer rounded bg-blue-500 px-[30px] py-[15px] text-center text-white "
             />
             <p
-              onClick={setFormVisible(false)}
+              onClick={() => setFormVisible(false)}
               className=" w-[30%] cursor-pointer rounded bg-red-500 px-4 pt-3 text-center text-white "
             >
               Close
