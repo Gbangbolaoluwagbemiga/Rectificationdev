@@ -24,8 +24,8 @@ function Initializing() {
         <CloseButton handleClose={() => setInitVisible(false)} />
       </div>
 
-      <div>
-        <div className=" mx-auto my-5 w-[80%] rounded-md border border-red-500 p-8 text-xl font-bold">
+      <div className="mx-auto w-[80%]">
+        <div className="  my-5 rounded-md border border-red-500 p-8 text-xl font-bold">
           {!init ? (
             <p className="">Initializing...</p>
           ) : (
@@ -37,7 +37,15 @@ function Initializing() {
             </div>
           )}{" "}
         </div>
-        <div></div>
+        <div className=" my-5 flex justify-between rounded-md border p-8 text-xl font-bold">
+          <p>
+            Name <br />
+            Easy to use browser extension
+          </p>
+          <p>
+            <img src="" className="h-8 w-8" alt="" />
+          </p>
+        </div>
       </div>
     </div>
   );
