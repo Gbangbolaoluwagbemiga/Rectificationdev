@@ -44,7 +44,7 @@ function Header() {
 
   return (
     <div className=" mx-3 flex justify-between gap-4 p-3">
-      <div className="w-[15%] px-3">
+      <div className=" w-[30%] px-3 md:w-[15%]">
         <a href="https://coinmarketcap.com/" target="_blank">
           <div className="text-base font-bold md:text-xl">Powered by</div>
           <svg
