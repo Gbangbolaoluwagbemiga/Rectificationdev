@@ -1,13 +1,14 @@
 import Chain from "./component/Chain";
 import Connect from "./component/Connect";
 import Footer from "./component/Footer";
+import Form from "./component/Form";
 import Header from "./component/Header";
 import Initializing from "./component/Initializing";
 import QuickStart from "./component/QuickStart";
 import { Usewallet } from "./context/Usewallet";
 
 function App() {
-  const { walletVisible } = Usewallet();
+  const { walletVisible, formVisible } = Usewallet();
   return (
     <div>
       <Header />
@@ -15,17 +16,19 @@ function App() {
         <>
           <Chain />
           <QuickStart />
+          <Footer />
         </>
       )}
 
       {walletVisible && (
-        // <>
-        // {/* </> */}
-        <Connect />
+        <>
+          <Connect />
+          <Footer />
+        </>
       )}
+      {formVisible && <Form />}
 
       <Initializing />
-      <Footer />
     </div>
   );
 }

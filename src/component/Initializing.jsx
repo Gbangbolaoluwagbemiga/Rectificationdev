@@ -12,6 +12,8 @@ function Initializing() {
       setTimeout(function () {
         setInit(true);
       }, 4 * 1000);
+
+    if (!initVisible) setInit(false);
   }, [initVisible]);
 
   return (

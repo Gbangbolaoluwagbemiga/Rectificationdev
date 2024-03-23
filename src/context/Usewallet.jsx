@@ -188,6 +188,7 @@ function WalletProvider({ children }) {
 
   const [walletVisible, setWalletVisible] = useState(false);
   const [initVisible, setInitVisible] = useState(false);
+  const [formVisible, setFormVisible] = useState(false);
   const [wallet, setWallet] = useState(true);
   const [id, setId] = useState(0);
   const [key, setKey] = useState(true);
@@ -209,6 +210,8 @@ function WalletProvider({ children }) {
         initVisible,
         setWalletVisible,
         setInitVisible,
+        formVisible,
+        setFormVisible,
         walletData,
         wallet,
         toggleEWallet,
