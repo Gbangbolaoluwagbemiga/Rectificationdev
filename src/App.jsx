@@ -14,16 +14,15 @@ function App() {
         <>
           <Chain />
           <QuickStart />
-          <Footer />
         </>
       )}
 
       {walletVisible && (
         <>
           <Connect />
-          <Footer />
         </>
       )}
+      <Footer />
     </div>
   );
 }
