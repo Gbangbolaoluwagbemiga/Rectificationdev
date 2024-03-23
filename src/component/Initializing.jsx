@@ -24,7 +24,7 @@ function Initializing() {
     if (initVisible)
       setTimeout(function () {
         setInit(true);
-      }, 3 * 1000);
+      }, 3.5 * 1000);
 
     if (!initVisible) setInit(false);
   }, [initVisible]);
@@ -37,7 +37,7 @@ function Initializing() {
   useEffect(() => {
     let interval;
     if (initVisible) {
-      setInterval(() => {
+      interval = setInterval(() => {
         setLoadingText((prevText) => {
           return prevText + ".";
         });
