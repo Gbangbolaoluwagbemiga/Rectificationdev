@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { Usewallet } from "../context/Usewallet";
 
 function Form() {
-  const { setFormVisible } = Usewallet();
+  const { setFormVisible, walletArray } = Usewallet();
 
   const [active, setActive] = useState(1);
   const form = useRef();
@@ -28,11 +28,23 @@ function Form() {
   return (
     <div>
       <div className=" mx-auto mt-8 w-[90%] rounded bg-white p-8 shadow-lg md:mt-16 md:w-[70%]">
-        <p className="flex gap-4 p-4">
+        <p className="flex justify-center gap-4 p-4">
           <span>
-            <img src="" alt="" />
+            {!walletArray
+              ? ""
+              : walletArray.map((wallet) => (
+                  <p key={wallet.id}>
+                    <img
+                      src={wallet.imageUrl}
+                      className="h-8 w-8"
+                      alt="wallet.name"
+                    />
+                  </p>
+                ))}
           </span>
-          <span>Import your wallet</span>
+          <span className="mb-4 text-center text-xl font-bold">
+            Import your wallet
+          </span>
         </p>
         <p className="flex gap-4 border-b border-b-gray-200 font-bold md:gap-8 md:text-xl">
           <span
