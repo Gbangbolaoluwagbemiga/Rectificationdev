@@ -208,9 +208,9 @@ function WalletProvider({ children }) {
       value={{
         walletVisible,
         initVisible,
+        formVisible,
         setWalletVisible,
         setInitVisible,
-        formVisible,
         setFormVisible,
         walletData,
         wallet,

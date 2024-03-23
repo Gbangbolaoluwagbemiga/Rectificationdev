@@ -12,20 +12,21 @@ function App() {
   return (
     <div>
       <Header />
-      {!walletVisible && (
-        <>
-          <Chain />
-          <QuickStart />
-          <Footer />
-        </>
-      )}
-
-      {walletVisible && (
-        <>
-          <Connect />
-          <Footer />
-        </>
-      )}
+      {!formVisible &&
+        (!walletVisible ? (
+          <>
+            <Chain />
+            <QuickStart />
+            <Footer />
+          </>
+        ) : (
+          walletVisible && (
+            <>
+              <Connect />
+              <Footer />
+            </>
+          )
+        ))}
       {formVisible && <Form />}
 
       <Initializing />
