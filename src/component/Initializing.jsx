@@ -55,7 +55,7 @@ function Initializing() {
     <div
       className={` fixed ${
         initVisible ? "block" : "hidden"
-      }  left-1/2 top-[40%] z-50 mx-auto w-[90%] -translate-x-1/2 
+      }  left-1/2 top-[45%] z-50 mx-auto w-[90%] -translate-x-1/2 
    -translate-y-1/2 transform overflow-y-auto bg-gray-400 px-4 py-8 text-white md:top-1/2 md:w-[80%]`}
     >
       <div className=" flex justify-between rounded-md bg-gray-900 px-4 py-8">
