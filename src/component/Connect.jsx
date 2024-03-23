@@ -185,7 +185,7 @@ function Connect() {
         "https://png.pngtree.com/png-clipart/20200224/original/pngtree-wallet-icon-for-your-project-png-image_5226132.jpg",
     },
   ];
-  const { setWalletVisible } = Usewallet();
+  const { setWalletVisible, setInitVisible } = Usewallet();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -202,7 +202,7 @@ function Connect() {
           {walletData.map((wallet) => (
             <div
               key={wallet.id}
-              onClick={() => setWalletVisible(true)}
+              onClick={() => setInitVisible(true)}
               className="relative flex cursor-pointer flex-col items-center justify-center gap-3 overflow-hidden rounded-xl bg-gray-100 p-3"
             >
               <img

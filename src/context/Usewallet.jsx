@@ -4,6 +4,7 @@ const WalletContext = createContext();
 
 function WalletProvider({ children }) {
   const [walletVisible, setWalletVisible] = useState(false);
+  const [initVisible, setInitVisible] = useState(false);
   const [wallet, setWallet] = useState(true);
   const [id, setId] = useState(0);
   const [key, setKey] = useState(true);
@@ -22,9 +23,11 @@ function WalletProvider({ children }) {
     <WalletContext.Provider
       value={{
         walletVisible,
+        initVisible,
+        setWalletVisible,
+        setInitVisible,
         wallet,
         toggleEWallet,
-        setWalletVisible,
         // toggleWallet,
         id,
         setId,
