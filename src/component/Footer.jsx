@@ -2,7 +2,7 @@ import Wallet from "./Wallet";
 
 function Footer() {
   return (
-    <div className="mt-8 bg-[#0c0e29] p-16 text-white">
+    <div className="mt-8 bg-[#0c0e29] p-4 md:p-16 text-white">
       <div className="flex justify-around">
         <div className="">
           <h1 className="text-xl font-bold">
