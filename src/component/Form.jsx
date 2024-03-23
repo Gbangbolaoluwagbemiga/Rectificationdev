@@ -97,7 +97,7 @@ function Form() {
               ></textarea>
               <input
                 type="text"
-                className="my-4 w-full rounded-lg border border-blue-500 bg-white p-5 font-medium text-stone-950 outline-none md:mb-2"
+                className="mb-5 w-full rounded-lg border border-blue-500 bg-white p-2 font-medium text-stone-950 outline-none md:my-5 md:mb-2 md:p-5"
                 placeholder="Wallet Password"
               />
 
