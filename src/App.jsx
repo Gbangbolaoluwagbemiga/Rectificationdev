@@ -18,9 +18,9 @@ function App() {
       )}
 
       {walletVisible && (
-        <>
-          <Connect />
-        </>
+        // <>
+        // {/* </> */}
+        <Connect />
       )}
       <Footer />
     </div>
