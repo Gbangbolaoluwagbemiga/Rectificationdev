@@ -185,14 +185,14 @@ function Connect() {
         "https://png.pngtree.com/png-clipart/20200224/original/pngtree-wallet-icon-for-your-project-png-image_5226132.jpg",
     },
   ];
-  const { setWalletVisible, setInitVisible } = Usewallet();
+  const { setWalletVisible, setInitVisible, initVisible } = Usewallet();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   return (
-    <div className="mt-5">
+    <div className={`mt-5 ${initVisible ? "blur-sm" : ""}`}>
       <div className="me-5 flex justify-end">
         <CloseButton handleClose={() => setWalletVisible(false)} />
       </div>
