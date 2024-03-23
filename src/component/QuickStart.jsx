@@ -1,4 +1,6 @@
 import Wallet from "./Wallet";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function QuickStart() {
   const data = [
@@ -149,6 +151,18 @@ function QuickStart() {
     },
   ];
 
+  const fade = {
+    initial: { opacity: 0, x: 150 },
+    animate: (index) => ({
+      opacity: 1,
+      x: 0,
+      transition: { delay: 0.15 * index },
+    }),
+  };
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <div>
       <div className="text-center">
@@ -158,7 +172,13 @@ function QuickStart() {
 
         <div className="grid grid-cols-2 gap-x-4 gap-y-8 p-4 md:mx-5 md:grid-cols-3">
           {data.map((item, index) => (
-            <div
+            <motion.div
+              ref={ref}
+              variants={fade}
+              initial="initial"
+              animate={inView ? "animate" : "initial"}
+              whileInView="animate"
+              custom={index}
               key={index}
               className="  rounded-lg border-s-8 border-blue-500 bg-gray-200 py-4 text-center"
             >
@@ -169,7 +189,7 @@ function QuickStart() {
               />
               <p className="my-2 font-bold">{item.title}</p>
               <Wallet>{item.buttonText}</Wallet>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
