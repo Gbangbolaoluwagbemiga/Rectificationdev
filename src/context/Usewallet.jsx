@@ -8,9 +8,9 @@ function WalletProvider({ children }) {
   const [id, setId] = useState(0);
   const [key, setKey] = useState(true);
 
-  const toggleWallet = () => {
-    setWalletVisible((prevState) => !prevState);
-  };
+  // const toggleWallet = () => {
+  //   setWalletVisible((prevState) => !prevState);
+  // };
   const toggleEWallet = () => {
     setWallet((prevState) => !prevState);
   };
@@ -24,7 +24,8 @@ function WalletProvider({ children }) {
         walletVisible,
         wallet,
         toggleEWallet,
-        toggleWallet,
+        setWalletVisible,
+        // toggleWallet,
         id,
         setId,
         key,

@@ -14,11 +14,11 @@ function App() {
         <>
           <Chain />
           <QuickStart />
-          <Footer />
         </>
       )}
 
       {walletVisible && <Connect />}
+      <Footer />
     </div>
   );
 }

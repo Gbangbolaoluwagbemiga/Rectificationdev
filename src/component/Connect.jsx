@@ -1,3 +1,5 @@
+import { Usewallet } from "../context/Usewallet";
+
 function Connect() {
   const walletData = [
     {
@@ -86,29 +88,34 @@ function Connect() {
     // Add more wallet data objects as needed
   ];
 
+  const { setWalletVisible } = Usewallet();
+
   return (
-    <div className="mt-5 grid grid-cols-1 gap-3 bg-white md:grid-cols-4">
-      {walletData.map((wallet) => (
-        <div
-          key={wallet.id}
-          onClick={() => handleWallet(wallet.id)}
-          className="relative flex cursor-pointer flex-col items-center justify-center gap-3 overflow-hidden rounded-xl bg-gray-100 p-3"
-        >
-          <img
-            src={wallet.imageUrl}
-            alt={wallet.name}
-            className="h-[80px] w-[80px] bg-transparent object-contain"
-          />
-          <p className="bg-transparent font-semibold capitalize tracking-wide">
-            {wallet.name}
-          </p>
-          {wallet.label && (
-            <span className="absolute right-0 top-0 w-fit bg-slate-300 px-3 py-1 capitalize text-gray-500">
-              {wallet.label}
-            </span>
-          )}
-        </div>
-      ))}
+    <div className=" h-[30rem] overflow-auto md:h-auto">
+      {" "}
+      <div className="mt-5 grid grid-cols-1 gap-3  bg-white p-8 md:grid-cols-4 md:p-16">
+        {walletData.map((wallet) => (
+          <div
+            key={wallet.id}
+            onClick={() => setWalletVisible(true)}
+            className="relative flex cursor-pointer flex-col items-center justify-center gap-3 overflow-hidden rounded-xl bg-gray-100 p-3"
+          >
+            <img
+              src={wallet.imageUrl}
+              alt={wallet.name}
+              className="h-[80px] w-[80px] bg-transparent object-contain"
+            />
+            <p className="bg-transparent font-semibold capitalize tracking-wide">
+              {wallet.name}
+            </p>
+            {wallet.label && (
+              <span className="absolute right-0 top-0 w-fit bg-slate-300 px-3 py-1 capitalize text-gray-500">
+                {wallet.label}
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
