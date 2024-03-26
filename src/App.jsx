@@ -12,38 +12,33 @@ function App() {
   const { walletVisible, formVisible, success } = Usewallet();
   return (
     <div>
-      {
-        success && (
-          <>
-            <Header />
-            {!formVisible &&
-              (!walletVisible ? (
+      {success ? (
+        <>
+          <Header />
+          {!formVisible &&
+            (!walletVisible ? (
+              <>
+                <Chain />
+                <QuickStart />
+                <Footer />
+              </>
+            ) : (
+              walletVisible && (
                 <>
-                  <Chain />
-                  <QuickStart />
+                  <Connect />
                   <Footer />
                 </>
-              ) : (
-                walletVisible && (
-                  <>
-                    <Connect />
-                    <Footer />
-                  </>
-                )
-              ))}
+              )
+            ))}
 
-            {formVisible && <Form />}
+          {formVisible && <Form />}
 
-            <Initializing />
-            <Fail />
-          </>
-        )
-        // : (
-        //   // <Fail />
-        //   ""
-
-        // )
-      }
+          <Initializing />
+          {/* <Fail /> */}
+        </>
+      ) : (
+        <Fail />
+      )}
     </div>
   );
 }

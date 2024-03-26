@@ -8,11 +8,11 @@ function Fail() {
 
   return (
     <div className=" h-[100vh] w-[100vw]" style={{ background: "#08081c" }}>
-      <div className="mx-auto h-48 w-60 p-4">
+      <div className="mx-auto h-48 w-96 p-8">
         <p onClick={() => setSuccess(true)}>
-          <span className="flex justify-center gap-4 text-white">
+          <span className="my-5 flex justify-center gap-2 text-white">
             <img src={imageUrl} className="me-4 h-8 w-8" alt="name" />{" "}
-            <span className="font-bold">{name}</span>
+            <span className="text-xl font-bold">{name}</span>
           </span>
         </p>
 
