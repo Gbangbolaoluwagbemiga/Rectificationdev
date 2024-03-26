@@ -192,8 +192,6 @@ function WalletProvider({ children }) {
   const [success, setSuccess] = useState(true);
   const [walletArray, setWalletArray] = useState([]);
 
-  console.log(walletArray[0]);
-
   function handleID(id) {
     const selectedWallet = walletData.find((wallet) => wallet.id === id);
     if (selectedWallet) setWalletArray([selectedWallet]);
