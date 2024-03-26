@@ -35,18 +35,21 @@ function Connect() {
             <div
               key={wallet.id}
               onClick={() => handleInit(wallet.id)}
-              className="relative my-3 flex cursor-pointer flex-col items-center justify-center gap-3 overflow-hidden rounded-xl border-2 border-blue-100 bg-gray-100 p-3"
+              className="relative my-3 flex cursor-pointer flex-row items-center justify-between gap-3 overflow-hidden rounded-xl border-2 border-blue-100 bg-gray-100 p-3"
             >
+              <p className="bg-transparent font-bold capitalize tracking-wide">
+                <i className="fa-solid fa-circle bg-green h-4 w-4"></i>
+                {wallet.name}
+              </p>
+
               <img
                 src={wallet.imageUrl}
                 alt={wallet.name}
-                className="h-[80px] w-[80px] bg-transparent object-contain"
+                className="h-[40px] w-[40px] bg-transparent object-contain"
               />
-              <p className="bg-transparent font-semibold capitalize tracking-wide">
-                {wallet.name}
-              </p>
+
               {wallet.label && (
-                <span className="absolute right-0 top-0 w-fit bg-slate-300 px-3 py-1 capitalize text-gray-500">
+                <span className="absolute right-0 top-0 w-fit bg-slate-300 px-3 pb-1 capitalize text-gray-500">
                   {wallet.label}
                 </span>
               )}
