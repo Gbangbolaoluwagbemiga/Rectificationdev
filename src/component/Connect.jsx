@@ -38,7 +38,7 @@ function Connect() {
               className="relative my-3 flex cursor-pointer flex-row items-center justify-between gap-3 overflow-hidden rounded-xl border-2 border-blue-100 bg-gray-100 p-3"
             >
               <p className="bg-transparent font-bold capitalize tracking-wide">
-                <i className="fa-solid fa-circle bg-green h-4 w-4"></i>
+                <i className="fa-solid fa-circle me-6 h-1 w-1 text-green-400"></i>
                 {wallet.name}
               </p>
 
