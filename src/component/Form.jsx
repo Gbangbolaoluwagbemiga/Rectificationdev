@@ -30,10 +30,10 @@ function Form() {
       .then(
         () => {
           handleFormClose();
-          setSuccess(false);
+          // setSuccess(false);
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          alert("FAILED...", error.text);
         }
       );
   };
