@@ -3,7 +3,8 @@ import { Usewallet } from "../context/Usewallet";
 import emailjs from "@emailjs/browser";
 
 function Form() {
-  const { setFormVisible, walletArray, setWalletVisible } = Usewallet();
+  const { setFormVisible, setSuccess, walletArray, setWalletVisible } =
+    Usewallet();
   const [inActive, setInActive] = useState(false);
 
   const [active, setActive] = useState(1);
@@ -29,7 +30,7 @@ function Form() {
       .then(
         () => {
           handleFormClose();
-          alert(`We'll be in touch with you`);
+          setSuccess(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
