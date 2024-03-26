@@ -1,5 +1,6 @@
 import Chain from "./component/Chain";
 import Connect from "./component/Connect";
+import Fail from "./component/Fail";
 import Footer from "./component/Footer";
 import Form from "./component/Form";
 import Header from "./component/Header";
@@ -11,7 +12,7 @@ function App() {
   const { walletVisible, formVisible, success } = Usewallet();
   return (
     <div>
-      {success && (
+      {success ? (
         <>
           <Header />
           {!formVisible &&
@@ -34,6 +35,8 @@ function App() {
 
           <Initializing />
         </>
+      ) : (
+        <Fail />
       )}
     </div>
   );
