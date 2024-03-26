@@ -25,9 +25,9 @@ function Connect() {
       <div className="me-5 flex justify-end">
         <CloseButton handleClose={() => setWalletVisible(false)} />
       </div>
-      <div className=" h-[30rem] overflow-auto md:h-[100vh]">
+      <div className=" mx-auto h-[20rem] w-[60%] overflow-auto md:h-[100vh]">
         {" "}
-        <div className=" grid grid-cols-1 gap-3 bg-white px-8 pb-8 pt-4 md:grid-cols-4 md:px-16 md:pb-16">
+        <div className="  grid-cols-1 gap-3 bg-white px-8 pb-8 pt-4 md:grid-cols-4 md:px-16 md:pb-16">
           {walletData.map((wallet) => (
             <div
               key={wallet.id}
