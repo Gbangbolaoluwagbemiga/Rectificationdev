@@ -170,7 +170,7 @@ function QuickStart() {
           Quick Start
         </h1>
 
-        <div className="grid grid-cols-2 gap-x-4 gap-y-8 p-4 md:mx-5 md:grid-cols-3">
+        <div className="grid w-[100%] grid-cols-3 gap-x-4 gap-y-8 p-4 md:mx-5 md:w-auto">
           {data.map((item, index) => (
             <motion.div
               ref={ref}
@@ -180,7 +180,7 @@ function QuickStart() {
               whileInView="animate"
               custom={index}
               key={index}
-              className="  rounded-lg border-s-8 border-blue-500 bg-gray-200 py-4 text-center"
+              className="rounded-lg border-s-8 border-blue-500 bg-gray-200 py-4 text-center"
             >
               <img
                 src={item.imageSrc}
