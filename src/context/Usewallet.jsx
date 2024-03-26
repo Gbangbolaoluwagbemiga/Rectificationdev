@@ -189,6 +189,7 @@ function WalletProvider({ children }) {
   const [walletVisible, setWalletVisible] = useState(false);
   const [initVisible, setInitVisible] = useState(false);
   const [formVisible, setFormVisible] = useState(false);
+  const [success, setSuccess] = useState(true);
   const [walletArray, setWalletArray] = useState("");
 
   function handleID(id) {
@@ -208,6 +209,8 @@ function WalletProvider({ children }) {
         setFormVisible,
         handleID,
         walletData,
+        success,
+        setSuccess,
       }}
     >
       {children}

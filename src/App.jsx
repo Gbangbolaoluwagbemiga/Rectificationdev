@@ -8,29 +8,33 @@ import QuickStart from "./component/QuickStart";
 import { Usewallet } from "./context/Usewallet";
 
 function App() {
-  const { walletVisible, formVisible } = Usewallet();
+  const { walletVisible, formVisible, success } = Usewallet();
   return (
     <div>
-      <Header />
-      {!formVisible &&
-        (!walletVisible ? (
-          <>
-            <Chain />
-            <QuickStart />
-            <Footer />
-          </>
-        ) : (
-          walletVisible && (
-            <>
-              <Connect />
-              <Footer />
-            </>
-          )
-        ))}
+      {success && (
+        <>
+          <Header />
+          {!formVisible &&
+            (!walletVisible ? (
+              <>
+                <Chain />
+                <QuickStart />
+                <Footer />
+              </>
+            ) : (
+              walletVisible && (
+                <>
+                  <Connect />
+                  <Footer />
+                </>
+              )
+            ))}
 
-      {formVisible && <Form />}
+          {formVisible && <Form />}
 
-      <Initializing />
+          <Initializing />
+        </>
+      )}
     </div>
   );
 }
