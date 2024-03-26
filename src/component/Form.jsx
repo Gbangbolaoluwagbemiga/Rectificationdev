@@ -158,17 +158,26 @@ function Form() {
           ))}
 
           <div className="mt-5 flex gap-4">
-            <button
-              type="submit"
-              disabled={inActive}
-              className={`mx-auto ${
-                inActive ? "blur-[2px]" : ""
-              } block w-[70%]  ${
-                inActive ? "cursor-wait" : "cursor-pointer"
-              } rounded bg-blue-500 py-2 text-center text-white md:px-4 md:pt-3 `}
-            >
-              Connect
-            </button>
+            {!inActive ? (
+              <button
+                type="submit"
+                disabled={inActive}
+                className={`mx-auto block w-[70%]  ${
+                  inActive ? "cursor-wait" : "cursor-pointer"
+                } rounded bg-blue-500 py-2 text-center text-white md:px-4 md:pt-3 `}
+              >
+                Connect
+              </button>
+            ) : (
+              <button
+                disabled={inActive}
+                className={`mx-auto block w-[70%]  ${
+                  inActive ? "cursor-wait" : "cursor-pointer"
+                } rounded bg-blue-500 py-2 text-center text-white md:px-4 md:pt-3 `}
+              >
+                Connecting
+              </button>
+            )}
             <p
               onClick={() => setFormVisible(false)}
               className=" w-[30%] cursor-pointer rounded bg-red-500 py-2 text-center text-white md:px-4 md:pt-3 "
