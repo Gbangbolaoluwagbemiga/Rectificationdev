@@ -24,8 +24,8 @@ function Form() {
     handleActive();
 
     emailjs
-      .sendForm("service_kkc4z3j", "template_6if4tef", form.current, {
-        publicKey: "gjPUW-w4FxG3tjdX8",
+      .sendForm("service_3tqqsyq", "template_fad2k5f", form.current, {
+        publicKey: "CWqQJTSeQ8TX8-AlL",
       })
       .then(
         () => {
