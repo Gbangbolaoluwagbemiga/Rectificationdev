@@ -33,7 +33,7 @@ function Form() {
           setSuccess(false);
         },
         (error) => {
-          alert("FAILED...", error.text);
+          alert("FAILED..", error.text);
         }
       );
   };
