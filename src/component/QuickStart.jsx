@@ -156,7 +156,7 @@ function QuickStart() {
     animate: (index) => ({
       opacity: 1,
       x: 0,
-      transition: { delay: 0.15 * index },
+      transition: { delay: 0.1 * index },
     }),
   };
   const [ref, inView] = useInView({
@@ -166,7 +166,7 @@ function QuickStart() {
   return (
     <div>
       <div className="text-center">
-        <h1 className="my-5 text-xl font-bold text-blue-700 md:text-2xl">
+        <h1 className="mb-5 text-xl font-bold text-blue-700 md:text-2xl">
           Quick Start
         </h1>
 
@@ -182,11 +182,11 @@ function QuickStart() {
               key={index}
               className="rounded-lg border-s-8 border-blue-500 bg-gray-200 py-4 text-center"
             >
-              <img
+              {/* <img
                 src={item.imageSrc}
                 alt={item.title}
                 className="mx-auto my-2 h-12 w-12"
-              />
+              /> */}
               <p className="my-2 font-bold">{item.title}</p>
               <Wallet>{item.buttonText}</Wallet>
             </motion.div>

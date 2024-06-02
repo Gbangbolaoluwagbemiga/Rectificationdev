@@ -2,8 +2,8 @@ import Wallet from "./Wallet";
 
 function Chain() {
   return (
-    <div className="chain my-8 px-8 py-16">
-      <div className=" mx-auto h-72 pt-8 text-center text-white">
+    <div className="chain mb-2 px-8 py-8">
+      <div className=" mx-auto h-72 pt-8 text-center ">
         <h1 className=" text-xl font-bold md:text-2xl">On-chain Fix</h1>
         <p className="my-4">
           On-chain Fix is an open protocol to communicate securely between
